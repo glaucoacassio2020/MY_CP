@@ -9,7 +9,7 @@
 
 </div>
 
-<p align="center">Minha configuração pessoal para competições de programação (Codeforces, AtCoder, ICPC, etc.), inspirada nos setups de competidores de elite como Neal Wu.</p>
+<p align="center">Minha configuração pessoal para competições de programação (Codeforces, AtCoder, ICPC, etc.), inspirada no setup do competidor de elite Neal Wu.</p>
 
 ---
 
