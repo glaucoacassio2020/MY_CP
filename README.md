@@ -656,7 +656,11 @@ Personalize seu arquivo template.cc com algoritmos e estruturas de dados comuns 
 Use os scripts Python fornecidos para baixar problemas automaticamente:
 
 ```bash
-python3 ~/Sublime/download_prob.py [contest_id] [problem_letter]
+python3 download_prob.py [contest_id] [problem_letter]
+```
+ou
+```bash
+python3 download_problem.py [contest_id] [problem_letter]
 ```
 
 ### 4. Otimização de Desempenho
