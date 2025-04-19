@@ -642,14 +642,41 @@ Para obter feedback em tempo real de erros e avisos:
 
 ## 💡 Dicas e Truques
 
-### 1. Dicas de Depuração
+### 1. Configurar a Extensão Competitive Companion
+
+A Competitive Companion é uma extensão do Chrome essencial para baixar problemas automaticamente dos juízes online.
+
+#### Instalação da Extensão
+
+1. Abra o Chrome e acesse a [Chrome Web Store](https://chrome.google.com/webstore)
+2. Pesquise por "Competitive Companion" ou acesse diretamente: [Competitive Companion](https://chrome.google.com/webstore/detail/competitive-companion/cjnmckjndlpiamhfimnnjmnckgghkjbl)
+3. Clique em "Adicionar ao Chrome" e confirme a instalação
+
+#### Configuração da Porta
+
+1. Clique no ícone da extensão na barra de ferramentas do Chrome
+2. Clique no ícone de engrenagem para abrir as configurações
+3. Na seção "Listen on ports", adicione a porta `10046` (mantenha outras portas como 10045 se já estiverem configuradas)
+4. Salve as configurações
+
+#### Como Usar
+
+1. Navegue até a página de um problema no site da competição (Codeforces, AtCoder, CodeChef, etc.)
+2. Clique no ícone da extensão Competitive Companion na barra de ferramentas
+3. A extensão extrairá os dados do problema (título, limites de tempo/memória, exemplos de entrada/saída) e enviará para seu ambiente local
+4. Os arquivos de casos de teste serão automaticamente criados no diretório atual com o formato correto (A-1.in, A-1.out, etc.)
+
+> [!TIP]
+> A Competitive Companion funciona com a maioria dos juízes online populares, incluindo Codeforces, AtCoder, CodeChef, HackerRank, LeetCode, entre outros. Isso economiza muito tempo na configuração manual de casos de teste.
+
+### 2. Dicas de Depuração
 
 - Use a diretiva `#ifdef DEBUG` no seu código para incluir saídas de depuração que só aparecem no modo de depuração.
 - Configure breakpoints no seu código com GDB para depuração interativa.
 
 ### 2. Personalização de Template
 
-Personalize seu arquivo template.cc com algoritmos e estruturas de dados comuns que você usa frequentemente.
+Personalize seu arquivo template.cc, se desejar, com os algoritmos e estruturas de dados que você usa com frequência.
 
 ### 3. Download de Problemas
 
@@ -678,6 +705,3 @@ python3 download_problem.py [contest_id] [problem_letter]
 ❤️ **Bom Código e Boa Sorte nas Competições!** ❤️
 
 </div>
-
-
-
