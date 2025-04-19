@@ -312,11 +312,18 @@ def print_initial_instructions():
    - Open a problem page
    - Click Competitive Companion extension icon
 
-{Colors.HEADER}USAGE EXAMPLES:{Colors.END}
+{Colors.HEADER}Usage examples:{Colors.END}
    {Colors.OKBLUE}• Download 1 problem:     {Colors.END}python3 download_prob.py
    {Colors.OKBLUE}• Download 3 problems:    {Colors.END}python3 download_prob.py -n 3
    {Colors.OKBLUE}• Download 2 batches:     {Colors.END}python3 download_prob.py -b 2
    {Colors.OKBLUE}• Dry run (preview only): {Colors.END}python3 download_prob.py --dryrun
+
+{Colors.HEADER}After downloading:{Colors.END}
+   {Colors.OKBLUE}• Test problem A:         {Colors.END}runsamples A
+   {Colors.OKBLUE}• Test problem B:         {Colors.END}runsamples B
+   {Colors.OKBLUE}• Test problem C:         {Colors.END}runsamples C
+   {Colors.OKBLUE}• Run problem A interactively: {Colors.END}dbrun A
+   {Colors.OKBLUE}• Run problem B interactively: {Colors.END}dbrun B
 
 {Colors.WARNING}Waiting for Competitive Companion problem...{Colors.END}
 """
