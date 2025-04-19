@@ -153,7 +153,7 @@ mkdir -p ~/bin
 2. Crie o script `runsamples`:
 
 ```bash
-nano ~/bin/runsamples
+gedit ~/bin/runsamples
 ```
 
 3. Adicione o seguinte conteúdo:
@@ -352,7 +352,7 @@ fi
 1. Crie o script:
 
 ```bash
-nano ~/bin/dbrun
+gedit ~/bin/dbrun
 ```
 
 2. Adicione o seguinte conteúdo:
