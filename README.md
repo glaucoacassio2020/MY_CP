@@ -9,7 +9,7 @@
 
 </div>
 
-<p align="center">Minha configuração pessoal para competições de programação (Codeforces, AtCoder, ICPC, etc.), inspirada no setup do competidor de elite Neal Wu.</p>
+<p align="center">Minha configuração pessoal para competições de programação (Codeforces, AtCoder, ICPC, etc.), inspirada nos setups de competidores de elite como Neal Wu.</p>
 
 ---
 
@@ -674,23 +674,117 @@ A Competitive Companion é uma extensão do Chrome essencial para baixar problem
 - Use a diretiva `#ifdef DEBUG` no seu código para incluir saídas de depuração que só aparecem no modo de depuração.
 - Configure breakpoints no seu código com GDB para depuração interativa.
 
-### 2. Personalização de Template
+### 3. Ferramentas para Geração e Teste de Casos
 
-Personalize seu arquivo template.cc, se desejar, com os algoritmos e estruturas de dados que você usa com frequência.
+Os seguintes arquivos são incluídos na configuração para facilitar a geração e teste de casos:
 
-### 3. Download de Problemas
+#### brute.cpp
+Este arquivo implementa uma solução de força bruta para um problema. É útil para verificar a corretude da sua solução otimizada comparando as saídas em casos de teste aleatórios.
 
-Use os scripts Python fornecidos para baixar problemas automaticamente:
-
-```bash
-python3 download_prob.py [contest_id] [problem_letter]
+Exemplo de um `brute.cpp` para encontrar o segundo menor elemento:
+```cpp
+// brute.cpp
+// solução lenta para encontrar o segundo menor elemento
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for(int& x : a) {
+        cin >> x;
+    }
+    for(int x : a) {
+        int count_smaller = 0;
+        for(int y : a) {
+            if(y < x) {
+                ++count_smaller;
+            }
+        }
+        if(count_smaller == 1) {
+            cout << x;
+            return 0;
+        }
+    }
+    assert(false);
+}
 ```
-ou
-```bash
-python3 download_problem.py [contest_id] [problem_letter]
+
+#### gen.cpp
+Gera casos de teste aleatórios para testar sua solução e a solução de força bruta.
+
+#### gen_cf.py
+Script para baixar casos de teste do Codeforces e formatá-los corretamente para uso com os comandos `runsamples` e `dbrun`.
+
+#### gen_tree.cpp e gen_tree2.cpp
+Scripts especializados para gerar árvores aleatórias, úteis para problemas de grafos.
+
+### 4. Template Otimizado para Competições
+
+Este é um template completo que inclui todas as bibliotecas comuns, macros úteis para depuração e estrutura básica para competições:
+
+```cpp
+#include <algorithm>
+#include <array>
+#include <bitset>
+#include <cassert>
+#include <chrono>
+#include <cmath>
+#include <cstring>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <vector>
+using namespace std;
+ 
+// http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0200r0.html
+template<class Fun> class y_combinator_result {
+    Fun fun_;
+public:
+    template<class T> explicit y_combinator_result(T &&fun): fun_(std::forward<T>(fun)) {}
+    template<class ...Args> decltype(auto) operator()(Args &&...args) { return fun_(std::ref(*this), std::forward<Args>(args)...); }
+};
+template<class Fun> decltype(auto) y_combinator(Fun &&fun) { return y_combinator_result<std::decay_t<Fun>>(std::forward<Fun>(fun)); }
+ 
+ 
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template < typename T_container, typename T = typename enable_if < !is_same<T_container, string>::value, typename T_container::value_type >::type > ostream & operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+ 
+void dbg_out() { cerr << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+#ifdef DEBUG
+#define dbg(...) cerr << "LINE(" << __LINE__ << ") -> (" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+ 
+ 
+void run_case() {
+    // TODO: código aqui...
+}
+ 
+int main() {
+    ios::sync_with_stdio(false);
+#ifndef DEBUG
+    cin.tie(nullptr);
+#endif
+    int T = 1;
+    cin >> T;
+    while (T-- > 0) {
+        run_case();
+    }
+}
 ```
 
-### 4. Otimização de Desempenho
+> [!TIP]
+> Use a macro `dbg(variável)` para depuração. Ela imprimirá o nome e o valor da variável no stderr quando compilado com a flag `-DDEBUG`. Por exemplo, `dbg(v)` mostrará `LINE(42) -> (v): {1, 2, 3}` para um vetor v com elementos 1, 2, 3 na linha 42.
+
+### 5. Otimização de Desempenho
 
 - Compile com `-O2` para desempenho ideal (já incluído nos scripts).
 - Esteja ciente dos limites de tempo e memória para cada problema.
