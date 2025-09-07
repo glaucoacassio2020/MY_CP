@@ -660,17 +660,17 @@ wget https://download.eclipse.org/jdtls/milestones/1.9.0/jdt-language-server-1.9
 tar -xzf jdt-language-server-1.9.0-202203031534.tar.gz -C ~/jdtls
 ```
 
-Passo 2: Verificar a instalação
+- Passo 2: Verificar a instalação
 ```bash
 # Verificar se extraiu corretamente
 ls ~/jdtls
 ```
 Deve aparecer: `config_linux, plugins, README.md`
-Passo 3: Encontrar o arquivo JAR exato
+- Passo 3: Encontrar o arquivo JAR exato
 ```bash
 ls ~/jdtls/plugins/org.eclipse.equinox.launcher_*.jar
 ```
-Anote o nome completo do arquivo (exemplo: org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar)
+Anote o nome completo do arquivo (exemplo: `org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar`)
 3. Configurar o `LSP` no Sublime Text
 
 No Sublime: `Preferences → Package Settings → LSP → Settings`
@@ -727,10 +727,10 @@ Cole a configuração abaixo, ajustando o nome do `JAR` para o que você encontr
 ```
 ###⚠️ IMPORTANTE: Substitua:
 
-SEU_USUARIO pelo seu nome de usuário
-VERSAO_AQUI pelo nome exato do arquivo JAR que você encontrou
+`SEU_USUARIO` pelo seu nome de usuário
+`VERSAO_AQUI` pelo nome exato do arquivo JAR que você encontrou
 
-4. Reiniciar o LSP
+4. Reiniciar o `LSP`
 Após salvar a configuração, clique em "Restart" quando aparecer a notificação.
 
 ### 🔨 Configuração do Build System (Compilar e Executar)
@@ -764,7 +764,7 @@ Solução: Use o caminho completo do Java no comando:
     // ... resto da configuração
 ]
 ```
-Erro: JDTLS crashando constantemente
+Erro: `JDTLS` crashando constantemente
 Possíveis soluções:
 
 Verificar permissões:
@@ -801,7 +801,7 @@ Se necessário, adicione ao Build System o caminho completo:
 }
 ```
 LSP não reconhece arquivos Java
-Solução: Certifique-se de que o arquivo tem a extensão .java e que está salvo antes de tentar usar o LSP.
+Solução: Certifique-se de que o arquivo tem a extensão .java e que está salvo antes de tentar usar o `LSP`.
 ###✅ Teste Final
 Crie um arquivo `HelloWorld.java`:
 ```java
@@ -813,7 +813,7 @@ public class HelloWorld {
 ```
 Salve o arquivo
 Pressione `Ctrl+B` para compilar e executar
-Deve aparecer "Hello, World!" no console do Sublime
+Deve aparecer `"Hello, World!"` no console do Sublime
 
 ### 📌 Dicas Extras
 
@@ -837,7 +837,7 @@ Para obter feedback em tempo real de erros e avisos:
 2. Isso mostrará erros e avisos de compilação enquanto você digita
 
 > [!WARNING]
-> Sem a configuração adequada do LSP, você perderá recursos críticos de detecção de erros em tempo real, o que é crucial para programação competitiva.
+> Sem a configuração adequada do `LSP`, você perderá recursos críticos de detecção de erros em tempo real, o que é crucial para programação competitiva.
 
 ---
 
