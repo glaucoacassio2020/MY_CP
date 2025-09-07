@@ -670,7 +670,7 @@ Deve aparecer: `config_linux, plugins, README.md`
 ```bash
 ls ~/jdtls/plugins/org.eclipse.equinox.launcher_*.jar
 ```
-Anote o nome completo do arquivo (exemplo: `org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar`)
+Anote o nome completo do arquivo (exemplo: `org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar`)  
 3. Configurar o `LSP` no Sublime Text
 
 No Sublime: `Preferences → Package Settings → LSP → Settings`
