@@ -635,16 +635,16 @@ javac -version
 ```bash
 which java
 ```
-Geralmente retorna /usr/bin/java. Guarde esse caminho!
+Geralmente retorna `/usr/bin/java`. Guarde esse caminho!
 ### 🛠️ Configuração do LSP (Language Server Protocol)
-1. Instalar o pacote LSP no Sublime Text
+1. Instalar o pacote `LSP` no Sublime Text
 
 Abra o Sublime Text
 `Ctrl+Shift+P` → `Package Control: Install Package`
 Procure e instale `LSP`
 
-2. Baixar e configurar o JDTLS (Java Language Server)
-Passo 1: Criar diretório e baixar o servidor
+2. Baixar e configurar o `JDTLS (Java Language Server)`
+- Passo 1: Criar diretório e baixar o servidor
 ```bash
 # Criar pasta para o jdtls
 mkdir ~/jdtls
