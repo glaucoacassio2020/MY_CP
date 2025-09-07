@@ -606,7 +606,7 @@ Para uma configuração mais completa, use esta configuração avançada:
 }
 ```
 
-📋 Pré-requisitos
+### 📋 Pré-requisitos para configuração do Java no LSP
 1. Instalação do Java JDK
 Primeiro, verifique se o Java está instalado:
 ```bash
@@ -648,13 +648,13 @@ Passo 1: Criar diretório e baixar o servidor
 # Criar pasta para o jdtls
 mkdir ~/jdtls
 ```
-# Baixar o language server
+### Baixar o language server
 ```bash
 cd ~/Downloads
 wget https://download.eclipse.org/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz
 ```
 
-# Extrair para a pasta criada
+### Extrair para a pasta criada
 ```bash
 tar -xzf jdt-language-server-1.9.0-202203031534.tar.gz -C ~/jdtls
 ```
@@ -664,7 +664,7 @@ Passo 2: Verificar a instalação
 # Verificar se extraiu corretamente
 ls ~/jdtls
 ```
-Deve aparecer: config_linux, plugins, README.md
+Deve aparecer: `config_linux, plugins, README.md`
 Passo 3: Encontrar o arquivo JAR exato
 ```bash
 ls ~/jdtls/plugins/org.eclipse.equinox.launcher_*.jar
@@ -673,7 +673,7 @@ Anote o nome completo do arquivo (exemplo: org.eclipse.equinox.launcher_1.6.400.
 3. Configurar o `LSP` no Sublime Text
 
 No Sublime: `Preferences → Package Settings → LSP → Settings`
-Cole a configuração abaixo, ajustando o nome do JAR para o que você encontrou:
+Cole a configuração abaixo, ajustando o nome do `JAR` para o que você encontrou:
 
 ```json
 {
@@ -724,14 +724,15 @@ Cole a configuração abaixo, ajustando o nome do JAR para o que você encontrou
     }
 }
 ```
-⚠️ IMPORTANTE: Substitua:
+###⚠️ IMPORTANTE: Substitua:
 
 SEU_USUARIO pelo seu nome de usuário
 VERSAO_AQUI pelo nome exato do arquivo JAR que você encontrou
 
 4. Reiniciar o LSP
 Após salvar a configuração, clique em "Restart" quando aparecer a notificação.
-🔨 Configuração do Build System (Compilar e Executar)
+
+###🔨 Configuração do Build System (Compilar e Executar)
 Criar um Build System customizado
 
 No Sublime: `Tools → Build System → New Build System`
@@ -800,8 +801,8 @@ Se necessário, adicione ao Build System o caminho completo:
 ```
 LSP não reconhece arquivos Java
 Solução: Certifique-se de que o arquivo tem a extensão .java e que está salvo antes de tentar usar o LSP.
-✅ Teste Final
-Crie um arquivo HelloWorld.java:
+###✅ Teste Final
+Crie um arquivo `HelloWorld.java`:
 ```java
 public class HelloWorld {
     public static void main(String[] args) {
@@ -813,7 +814,7 @@ Salve o arquivo
 Pressione `Ctrl+B` para compilar e executar
 Deve aparecer "Hello, World!" no console do Sublime
 
-📌 Dicas Extras
+### 📌 Dicas Extras
 
 Para projetos maiores: Considere usar Maven ou Gradle com plugins específicos do Sublime
 Alternativa mais simples: Se o JDTLS der muito problema, você pode desabilitar ele e usar apenas o Build System
