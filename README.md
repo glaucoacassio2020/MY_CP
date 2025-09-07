@@ -644,7 +644,7 @@ Abra o Sublime Text
 Procure e instale `LSP`
 
 2. Baixar e configurar o `JDTLS (Java Language Server)`
-- Passo 1: Criar diretório e baixar o servidor
+- Passo 1: Abra o terminal e crie diretório e baixe o servidor
 ```bash
 # Criar pasta para o jdtls
 mkdir ~/jdtls
