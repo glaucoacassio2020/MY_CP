@@ -738,7 +738,7 @@ Após salvar a configuração, clique em "Restart" quando aparecer a notificaç�
 ### 🔨 Configuração do Build System (Compilar e Executar)
 Criar um Build System customizado
 
-No Sublime: `Tools → Build System → New Build System`
+No Sublime: `Tools → Build System → New Build System`  
 Cole o código abaixo:
 
 ```json
