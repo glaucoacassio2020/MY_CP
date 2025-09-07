@@ -732,6 +732,8 @@ Substitua:
 `*SEU_USUARIO*` pelo seu nome de usuário  
 `*VERSAO_AQUI*` pelo nome exato do arquivo JAR que você encontrou  
 
+4. Reiniciar o `LSP`
+Após salvar a configuração, clique em "Restart" quando aparecer a notificação.
 
 ### Script de Instalação Automática (opcional)  
 Crie um `install-jdtls.sh`:   
@@ -755,9 +757,6 @@ echo "✅ JDTLS instalado com sucesso!"
 echo "📝 Agora configure o LSP no Sublime Text"
 
 ```
-
-4. Reiniciar o `LSP`
-Após salvar a configuração, clique em "Restart" quando aparecer a notificação.
 
 ### 🔨 Configuração do Build System (Compilar e Executar)
 Criar um `Build System` customizado
