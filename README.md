@@ -671,6 +671,7 @@ Deve aparecer: `config_linux, plugins, README.md`
 ls ~/jdtls/plugins/org.eclipse.equinox.launcher_*.jar
 ```
 Anote o nome completo do arquivo (exemplo: `org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar`)      
+
 3. Configurar o `LSP` no Sublime Text
 
 No Sublime: `Preferences → Package Settings → LSP → Settings`  
@@ -736,7 +737,7 @@ Substitua:
 Após salvar a configuração, clique em "Restart" quando aparecer a notificação.
 
 ### 🔨 Configuração do Build System (Compilar e Executar)
-Criar um Build System customizado
+Criar um `Build System` customizado
 
 No Sublime: `Tools → Build System → New Build System`  
 Cole o código abaixo:
