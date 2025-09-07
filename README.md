@@ -727,6 +727,29 @@ Cole a configuração abaixo, ajustando o nome do `JAR` para o que você encontr
 }
 ```
 
+###Script de Instalação Automática (opcional)  
+Crie um `install-jdtls.sh`:   
+```bash
+#!/bin/bash
+# Script de instalação automática do JDTLS
+
+echo "🚀 Instalando JDTLS para Sublime Text..."
+
+# Criar diretório
+mkdir -p ~/jdtls
+
+# Baixar JDTLS
+cd ~/Downloads
+wget https://download.eclipse.org/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz
+
+# Extrair
+tar -xzf jdt-language-server-1.9.0-202203031534.tar.gz -C ~/jdtls
+
+echo "✅ JDTLS instalado com sucesso!"
+echo "📝 Agora configure o LSP no Sublime Text"
+
+```
+
 ### ⚠️ IMPORTANTE:   
 Substitua:
 
