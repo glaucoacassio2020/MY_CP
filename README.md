@@ -753,12 +753,12 @@ Salve como: `Java.sublime-build`
 
 ### Como usar
 
-Crie um arquivo `.java` 
-Pressione `Ctrl+B (ou F7)`
+Crie um arquivo `.java`  
+Pressione `Ctrl+B (ou F7)`  
 Veja o resultado na parte inferior do Sublime!
 
 ### 🐛 Resolução de Problemas
-Erro: "java command not found" no `LSP`
+Erro: "java command not found" no `LSP`  
 Solução: Use o caminho completo do Java no comando:
 ```json
 "command": [
@@ -767,8 +767,8 @@ Solução: Use o caminho completo do Java no comando:
     // ... resto da configuração
 ]
 ```
-Erro: `JDTLS` crashando constantemente
-Possíveis soluções:
+Erro: `JDTLS` crashando constantemente  
+Possíveis soluções:  
 
 Verificar permissões:
 
@@ -803,7 +803,7 @@ Se necessário, adicione ao `Build System` o caminho completo:
     "shell": true
 }
 ```
-`LSP` não reconhece arquivos Java
+`LSP` não reconhece arquivos Java  
 Solução: Certifique-se de que o arquivo tem a extensão `.java` e que está salvo antes de tentar usar o `LSP`.
 
 ### ✅ Teste Final
@@ -815,9 +815,9 @@ public class HelloWorld {
     }
 }
 ```
-Salve o arquivo
-Pressione `Ctrl+B` para compilar e executar
-Deve aparecer `"Hello, World!"` no console do Sublime
+Salve o arquivo  
+Pressione `Ctrl+B` para compilar e executar  
+Deve aparecer `"Hello, World!"` no console do Sublime  
 
 ### 📌 Dicas Extras
 
