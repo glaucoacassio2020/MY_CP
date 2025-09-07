@@ -727,7 +727,7 @@ Cole a configuração abaixo, ajustando o nome do `JAR` para o que você encontr
 }
 ```
 
-###Script de Instalação Automática (opcional)  
+### Script de Instalação Automática (opcional)  
 Crie um `install-jdtls.sh`:   
 ```bash
 #!/bin/bash
