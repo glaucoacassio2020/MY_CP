@@ -748,14 +748,14 @@ Cole o código abaixo:
 ```
 Salve como: `Java.sublime-build`
 
-Como usar
+### Como usar
 
 Crie um arquivo .java
 Pressione `Ctrl+B (ou F7)`
 Veja o resultado na parte inferior do Sublime!
 
 ### 🐛 Resolução de Problemas
-Erro: "java command not found" no LSP
+Erro: "java command not found" no `LSP`
 Solução: Use o caminho completo do Java no comando:
 ```json
 "command": [
@@ -791,7 +791,7 @@ Verifique se o Java está no PATH:
 ```bash
 echo $PATH
 ```
-Se necessário, adicione ao Build System o caminho completo:
+Se necessário, adicione ao `Build System` o caminho completo:
 
 ```json
 {
