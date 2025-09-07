@@ -612,15 +612,16 @@ Primeiro, verifique se o Java está instalado:
 ```bash
 java -version
 javac -version
-Se aparecer command not found, instale o JDK:
 ```
-# Para Java 17 (recomendado)
+Se aparecer command not found, instale o JDK:
+
+### Para Java 17 (recomendado)
 ```bash
 sudo apt update
 sudo apt install openjdk-17-jdk -y
 ```
 
-# OU para Java 21
+### OU para Java 21
 ```bash
 sudo apt update
 sudo apt install openjdk-21-jdk -y
@@ -635,7 +636,7 @@ javac -version
 which java
 ```
 Geralmente retorna /usr/bin/java. Guarde esse caminho!
-🛠️ Configuração do LSP (Language Server Protocol)
+### 🛠️ Configuração do LSP (Language Server Protocol)
 1. Instalar o pacote LSP no Sublime Text
 
 Abra o Sublime Text
@@ -732,7 +733,7 @@ VERSAO_AQUI pelo nome exato do arquivo JAR que você encontrou
 4. Reiniciar o LSP
 Após salvar a configuração, clique em "Restart" quando aparecer a notificação.
 
-###🔨 Configuração do Build System (Compilar e Executar)
+### 🔨 Configuração do Build System (Compilar e Executar)
 Criar um Build System customizado
 
 No Sublime: `Tools → Build System → New Build System`
@@ -753,7 +754,7 @@ Crie um arquivo .java
 Pressione `Ctrl+B (ou F7)`
 Veja o resultado na parte inferior do Sublime!
 
-🐛 Resolução de Problemas
+### 🐛 Resolução de Problemas
 Erro: "java command not found" no LSP
 Solução: Use o caminho completo do Java no comando:
 ```json
