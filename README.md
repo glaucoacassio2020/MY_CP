@@ -821,7 +821,7 @@ Deve aparecer `"Hello, World!"` no console do Sublime
 ### 📌 Dicas Extras
 
 Para projetos maiores: Considere usar Maven ou Gradle com plugins específicos do Sublime
-Alternativa mais simples: Se o JDTLS der muito problema, você pode desabilitar ele e usar apenas o Build System
+Alternativa mais simples: Se o JDTLS der muito problema, você pode desabilitar ele e usar apenas o `Build System`  
 Performance: Se o Sublime ficar lento, reduza a memória do JDTLS mudando -Xmx1G para -Xmx512M
 
 Se o Sublime não encontrar o clangd, verifique o caminho:
