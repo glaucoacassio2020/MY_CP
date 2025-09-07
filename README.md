@@ -752,7 +752,7 @@ Salve como: `Java.sublime-build`
 
 ### Como usar
 
-Crie um arquivo .java
+Crie um arquivo `.java` 
 Pressione `Ctrl+B (ou F7)`
 Veja o resultado na parte inferior do Sublime!
 
