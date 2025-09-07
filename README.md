@@ -726,7 +726,7 @@ Cole a configuração abaixo, ajustando o nome do `JAR` para o que você encontr
 }
 ```
 
-###⚠️ IMPORTANTE:   
+### ⚠️ IMPORTANTE:   
 Substitua:
 
 `SEU_USUARIO` pelo seu nome de usuário  
