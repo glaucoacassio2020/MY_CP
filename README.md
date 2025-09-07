@@ -552,26 +552,57 @@ Em seguida, no Sublime Text:
 Para uma configuração mais completa, use esta configuração avançada:
 
 ```json
-{
-  "clients": {
-    "clangd": {
-      "enabled": true, // Habilita o clangd
-      "command": [
-        "/usr/bin/clangd", // Caminho absoluto do executável clangd
-        "-function-arg-placeholders=0", // Não mostrar placeholders nos argumentos das funções
-        "-header-insertion-decorators=1", // Adiciona decoração ao sugerir headers
-        "-index" // Usa indexação para melhorar sugestões
-      ],
-      "scopes": ["source.c", "source.c++", "source.objc", "source.objc++"], // Linguagens suportadas
-      "syntaxes": [
-        "Packages/C++/C.sublime-syntax",
-        "Packages/C++/C++.sublime-syntax",
-        "Packages/Objective-C/Objective-C.sublime-syntax",
-        "Packages/Objective-C/Objective-C++.sublime-syntax"
-      ],
-      "languageId": "cpp" // Identificador da linguagem
+{ 
+    "clients": 
+    { 
+        "clangd": { 
+            "enabled": true, 
+            "command": [ 
+                "/usr/bin/clangd", 
+                // you may use an absolute path for this clangd executable 
+                "-function-arg-placeholders=0", 
+                "-header-insertion-decorators=1", 
+                "-index" 
+            ], 
+            "scopes": [ 
+                "source.c", 
+                "source.c++", 
+                "source.objc", 
+                "source.objc++" 
+            ], 
+            "syntaxes": [ 
+                "Packages/C++/C.sublime-syntax", 
+                "Packages/C++/C++.sublime-syntax", 
+                "Packages/Objective-C/Objective-C.sublime-syntax", 
+                "Packages/Objective-C/Objective-C++.sublime-syntax" 
+            ], 
+            "languageId": "cpp",
+            "languageId": "c",
+            "languageId": "cc"   
+        },
+        
+        "jdtls": {
+            "enabled": true,
+            "command": [
+                "java",
+                "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+                "-Dosgi.bundles.defaultStartLevel=4",
+                "-Declipse.product=org.eclipse.jdt.ls.core.product",
+                "-Dlog.level=ALL",
+                "-noverify",
+                "-Xmx1G",
+                "-jar",
+                "/home/parallels/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
+                "-configuration",
+                "/home/parallels/jdtls/config_linux",
+                "-data",
+                "/tmp/jdtls-workspace"
+            ],
+            "scopes": ["source.java"],
+            "syntaxes": ["Packages/Java/Java.sublime-syntax"],
+            "languageId": "java"
+        }
     }
-  }
 }
 ```
 
