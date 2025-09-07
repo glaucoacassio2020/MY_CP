@@ -800,9 +800,10 @@ Se necessário, adicione ao `Build System` o caminho completo:
     "shell": true
 }
 ```
-LSP não reconhece arquivos Java
-Solução: Certifique-se de que o arquivo tem a extensão .java e que está salvo antes de tentar usar o `LSP`.
-###✅ Teste Final
+`LSP` não reconhece arquivos Java
+Solução: Certifique-se de que o arquivo tem a extensão `.java` e que está salvo antes de tentar usar o `LSP`.
+
+### ✅ Teste Final
 Crie um arquivo `HelloWorld.java`:
 ```java
 public class HelloWorld {
