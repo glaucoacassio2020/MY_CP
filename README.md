@@ -729,8 +729,8 @@ Cole a configuração abaixo, ajustando o nome do `JAR` para o que você encontr
 ### ⚠️ IMPORTANTE:   
 Substitua:
 
-`SEU_USUARIO` pelo seu nome de usuário  
-`VERSAO_AQUI` pelo nome exato do arquivo JAR que você encontrou  
+*SEU_USUARIO* pelo seu nome de usuário  
+*VERSAO_AQUI* pelo nome exato do arquivo JAR que você encontrou  
 
 4. Reiniciar o `LSP`
 Após salvar a configuração, clique em "Restart" quando aparecer a notificação.
@@ -785,7 +785,7 @@ Se ainda persistir o erro, tente usar um caminho diferente para o workspace:
 "-data",
 "/home/SEU_USUARIO/.jdtls-workspace"  // Em vez de /tmp
 ```
-Erro: Build System não funciona
+Erro: Build System não funciona  
 Se o `Ctrl+B` não funcionar:
 
 Verifique se o Java está no PATH:
