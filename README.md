@@ -725,11 +725,12 @@ Cole a configuração abaixo, ajustando o nome do `JAR` para o que você encontr
     }
 }
 ```
-###⚠️ IMPORTANTE:   
-> Substitua:
 
-`SEU_USUARIO` pelo seu nome de usuário
-`VERSAO_AQUI` pelo nome exato do arquivo JAR que você encontrou
+###⚠️ IMPORTANTE:   
+Substitua:
+
+`SEU_USUARIO` pelo seu nome de usuário  
+`VERSAO_AQUI` pelo nome exato do arquivo JAR que você encontrou  
 
 4. Reiniciar o `LSP`
 Após salvar a configuração, clique em "Restart" quando aparecer a notificação.
